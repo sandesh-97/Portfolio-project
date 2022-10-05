@@ -1,0 +1,26 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+          // agar aise(position relative) nhi kiya t section upar se start horha tha aur neeche 70px ka gap white color me dkh rha tha
+        scroll-behavior: smooth;
+      //scroll behaviour dala kyuki anchor tag pe click karte hi wo waha pe chala jaa rha tha instantly , smoothly jane ke liye scroll behaviour smooth dala
+        scroll-snap-type: y mandatory;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+
+        > *{
+            width: 100%;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
+
